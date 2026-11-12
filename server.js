@@ -14,6 +14,9 @@ app.use(cors())
 
 app.use('/api', mainRoute);
 
+app.get('/',(req,res)=>{
+  res.json({"msg":"success"})
+})
 dbConnection.dbConnection();
 
 app.listen(port, () => {
